@@ -35,10 +35,24 @@ body {
   padding: 10px;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .picker {
   border: 1px solid #0F0F0F;
   height: 30px;
   width: 100px;
+}
+
+.github-link {
+  width: 100px;
+  height: 41px;
+  background: url('../assets/images/GitHub_Logo.png') no-repeat;
+  background-size: cover;
+}
+
+#app--canvas-container .github-link {
+  display: block;
+  position: absolute;
+  right: 5px;
 }

@@ -24,6 +24,10 @@ module.exports = {
         type: 'webassembly/experimental',
       },
       {
+        loader: 'file-loader',
+        test: /\.(png|jpe?g|gif)/,
+      },
+      {
         exclude: /node_modules/,
         loader: 'ts-loader',
         options: {

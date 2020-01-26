@@ -4,7 +4,11 @@
   "license": "MIT",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://neilbryson.github.io/",
+  "homepage": "https://neilbryson.github.io/wasm-paint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilbryson/wasm-paint.git"
+  },
   "dependencies": {
     "react": "16.12.0",
     "react-dom": "16.12.0"
@@ -13,7 +17,9 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
     "fork-ts-checker-webpack-plugin": "^4.0.2",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.1.3",
     "ts-loader": "^6.2.1",

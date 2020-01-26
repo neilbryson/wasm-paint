@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef } from 'react';
 
 import { render } from './pkg';
 import './styles/styles.css';
+import { GithubLink } from './components/GithubLink';
 
 export const App: FunctionComponent = () => {
   const canvasRef = useRef<HTMLDivElement | null>(null);
@@ -19,7 +20,9 @@ export const App: FunctionComponent = () => {
 
   return (
     <div className="app" id="app--container">
-      <div id="app--canvas-container" ref={canvasRef} />
+      <div id="app--canvas-container" ref={canvasRef}>
+        <GithubLink />
+      </div>
       <div id="app--picker-container" />
     </div>
   );
