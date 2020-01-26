@@ -14,8 +14,24 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 console_error_panic_hook = { version = "0.1.6", optional = true }
+js-sys = "0.3.35"
 wasm-bindgen = "0.2"
 wee_alloc = { version = "0.4.5", optional = true }
+
+[dependencies.web-sys]
+features = [
+  'CanvasRenderingContext2d',
+  'Document',
+  'Element',
+  'EventTarget',
+  'HtmlCanvasElement',
+  'HtmlDivElement',
+  'HtmlElement',
+  'MouseEvent',
+  'Node',
+  'Window'
+]
+version = "0.3.35"
 
 [profile.release]
 opt-level = "s"

@@ -19,8 +19,9 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: 'webassembly/experimental',
+        exclude: /node_modules/,
         test: /\.wasm$/,
+        type: 'webassembly/experimental',
       },
       {
         exclude: /node_modules/,
