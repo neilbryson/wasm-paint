@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+
+node_modules/
+
+build/
+
+# Rust
+debug/
+pkg/
+target/
+**/*.rs.bk
+Cargo.lock

@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FBFBFB;
+  color: #0F0F0F;
+}
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#app--canvas-container {
+  background-color: #FFFFFF;
+  flex: 3 3 0%;
+}
+
+#app--color-picker-container {
+  border-top: 1px solid #0F0F0F;
+  flex: 1 1 0%;
+}
