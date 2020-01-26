@@ -1,4 +1,7 @@
 # wasm-paint
+A simple paint application implemented with Rust and WebAssembly.
+
+https://neilbryson.github.io/wasm-paint/
 
 ## Requirements
 * Rust
