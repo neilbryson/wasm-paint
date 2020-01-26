@@ -20,9 +20,7 @@ export const App: FunctionComponent = () => {
   return (
     <div className="app" id="app--container">
       <div id="app--canvas-container" ref={canvasRef} />
-      <div id="app--color-picker-container">
-        Colour picker will appear here
-      </div>
+      <div id="app--picker-container" />
     </div>
   );
 };

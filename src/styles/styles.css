@@ -8,6 +8,8 @@ body {
   padding: 0;
   background-color: #FBFBFB;
   color: #0F0F0F;
+  min-width: 640px;
+  min-height: 480px;
 }
 
 .app {
@@ -22,7 +24,21 @@ body {
   flex: 3 3 0%;
 }
 
-#app--color-picker-container {
+#app--canvas-container canvas {
+  cursor: crosshair;
+}
+
+#app--picker-container {
   border-top: 1px solid #0F0F0F;
+  display: flex;
   flex: 1 1 0%;
+  padding: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.picker {
+  border: 1px solid #0F0F0F;
+  height: 30px;
+  width: 100px;
 }

@@ -25,9 +25,9 @@ pub fn initialise_mouse_events(
     ctx: &CtxRefCount,
     pressed: &PressedRefCount
 ) -> Result<(), JsValue> {
-    set_mouse_up_event(canvas, ctx, pressed);
-    set_mouse_move_event(canvas, ctx, pressed);
-    set_mouse_down_event(canvas, ctx, pressed);
+    set_mouse_up_event(canvas, ctx, pressed)?;
+    set_mouse_move_event(canvas, ctx, pressed)?;
+    set_mouse_down_event(canvas, ctx, pressed)?;
     Ok(())
 }
 
