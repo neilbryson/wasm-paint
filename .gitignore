@@ -5,6 +5,15 @@ node_modules/
 
 build/
 
+# Yarn berry
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Rust
 debug/
 pkg/

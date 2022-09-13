@@ -33,5 +33,6 @@
     "deploy": "gh-pages -d build",
     "predeploy": "webpack",
     "start": "webpack-dev-server"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
