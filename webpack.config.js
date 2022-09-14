@@ -1,34 +1,38 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    hot: true,
-    overlay: {
-      errors: true,
+    client: {
+      overlay: {
+        errors: true,
+      },
     },
+    historyApiFallback: true,
+    hot: true,
     port: 3000,
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
   },
   devtool: isDev && 'inline-source-map',
   entry: path.resolve(__dirname, 'src/bootstrap.js'),
+  experiments: {
+    syncWebAssembly: true,
+  },
   mode: isDev ? 'development' : 'production',
   module: {
     rules: [
-      {
-        exclude: /node_modules/,
-        test: /\.wasm$/,
-        type: 'webassembly/experimental',
-      },
       {
         loader: 'file-loader',
         test: /\.(png|jpe?g|gif)/,
       },
       {
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         loader: 'ts-loader',
         options: {
           transpileOnly: true,
@@ -36,6 +40,7 @@ module.exports = {
         test: /\.tsx?$/,
       },
       {
+        include: path.resolve(__dirname, 'src'),
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       }
@@ -55,8 +60,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
     }),
-    new ForkTsCheckerWebpackPlugin({
-      async: false,
+    new ForkTsCheckerWebpackPlugin(),
+    new WasmPackPlugin({
+      crateDirectory: __dirname,
     }),
   ],
   resolve: {
