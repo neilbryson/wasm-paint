@@ -28,8 +28,12 @@ module.exports = {
   module: {
     rules: [
       {
+        include: path.resolve(__dirname, 'src'),
         loader: 'file-loader',
-        test: /\.(png|jpe?g|gif)/,
+        options: {
+          name: '[path][name].[ext]',
+        },
+        test: /\.(png|jpe?g|gif)$/,
       },
       {
         include: path.resolve(__dirname, 'src'),

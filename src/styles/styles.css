@@ -47,8 +47,11 @@ body {
 .github-link {
   width: 100px;
   height: 41px;
-  background: url('../assets/images/GitHub_Logo.png') no-repeat;
-  background-size: cover;
+}
+
+.github-link > img {
+  width: 100%;
+  height: 100%;
 }
 
 #app--canvas-container .github-link {
